@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Single</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
   <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
   <?php } ?> -->
@@ -25,7 +24,7 @@
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->	
+  <![endif]-->  
 
 </head>
 <body>
@@ -62,20 +61,9 @@
   </div>
 </header>
 
-<section class="main-bnr-section">
-  <div class="main-banner mainBnrSlider" id="mainBnrSlider">
-    <div class="main-bnr-item" style="background: url(assets/images/main-bnr-img-01.jpg); height: 720px;">
-      <div class="main-bnr-des">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="main-bnr-des-inr">
-                <strong class="main-bnr-title">Wij geven uw tuin een extra dimensie</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<section class="page-banner">
+  <div class="page-banner-controller" style="overflow: hidden;">
+    <div class="page-banner-bg" style="background-image:url(assets/images/page-banner.jpg);">
     </div>
   </div>
 </section>
@@ -96,55 +84,65 @@
   </div>    
 </section>
 
-
-
-<section class="hm-main-content">
-  <div class="container">
+<section class="main-content section-divider">
+ <div class="posts-section">
+    <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div class="hm-main-con-cntlr">
-            <div class="hm-main-content-top">
-              <h1>Laat houtbouw aan de pro’s over</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et massa nibh. Nunc eget felis quis massa molestie mollis. Quisque ac ipsum nulla. In maximus nulla iaculis, varius neque id, ornare felis. Aliquam erat volutpat. Etiam suscipit euismod bibendum. Sed lacinia gravida magna vitae porta. Duis vitae <a href="#">augue elementum,</a> facilisis enim vel, rhoncus leo. </p>
-              <p>Nullam venenatis libero sit amet ante accumsan accumsan. Ut commodo ipsum sed lectus facilisis ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
-            </div>
-            <hr>
-            <div class="fea-img-grd-boxs-cntlr">
-              <ul class="ulc clearfix">
-                <li>
-                  <div class="fea-img-grd-box">
-                    <a href="#" class="overlay-link"></a>
-                    <div class="fea-img-grd-box-img" style="background: url(assets/images/grd-fea-box-img-01.jpg);"></div>
-                    <strong class="fea-img-grd-box-title">Schuren & Kapschuren </strong>
-                  </div>
-                </li>
-                <li>
-                  <div class="fea-img-grd-box">
-                    <a href="#" class="overlay-link"></a>
-                    <div class="fea-img-grd-box-img" style="background: url(assets/images/grd-fea-box-img-01.jpg);"></div>
-                    <strong class="fea-img-grd-box-title">Schuren & Kapschuren </strong>
-                  </div>
-                </li>
-                <li>
-                  <div class="fea-img-grd-box">
-                    <a href="#" class="overlay-link"></a>
-                    <div class="fea-img-grd-box-img" style="background: url(assets/images/grd-fea-box-img-01.jpg);"></div>
-                    <strong class="fea-img-grd-box-title">Schuren & Kapschuren </strong>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <hr>
-            <div class="hm-main-con-btm-des">
-              <p>Nullam venenatis libero sit amet ante accumsan accumsan. Ut commodo ipsum sed lectus facilisis ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-            </div>
+        <div class="col-sm-8 order-2"> 
+          <div class="post-items">
+            <article class="post-item clearfix">
+              <div class="post-img">
+                  <img src="assets/images/BadkamerNoorderdiep-150x150.jpg">
+              </div>
+              <div class="post-des">
+                <h4>Lorem ipsum</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur</p>
+              </div>
+            </article>
           </div>
-
         </div>
-      </div>
-  </div>    
-</section>
 
+        <div class="col-sm-4 order-1">
+          <div class="right-sidebar">
+            <aside class="search-wrp widget widget_search">
+              <form class="search-form">
+                <div class="search">
+                  <input type="search" placeholder="Search...">
+                  <input type="submit" value="">
+                </div>
+              </form>
+            </aside>
+            <aside>
+              <div class="sidebar-widget">
+                <h4>Recent post</h4>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                </ul>
+              </div>
+            </aside>
+            <aside>
+              <div class="sidebar-widget">
+                <h4>Recent post</h4>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+      </div>
+    </div>     
+  </div><!-- end of .posts-section -->   
+</section><!-- end of .main-content -->
 
 
 <footer class="footer-wrp">
