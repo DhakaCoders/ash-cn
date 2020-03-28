@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Yantramanav-Light';
+    src: url('Yantramanav-Light/Yantramanav-Light.eot');
+    src: url('Yantramanav-Light/Yantramanav-Light.eot') format('embedded-opentype'),
+         url('Yantramanav-Light/Yantramanav-Light.woff2') format('woff2'),
+         url('Yantramanav-Light/Yantramanav-Light.woff') format('woff'),
+         url('Yantramanav-Light/Yantramanav-Light.ttf') format('truetype'),
+         url('Yantramanav-Light/Yantramanav-Light.svg#Yantramanav-Light') format('svg');
+    font-weight: 300;
+    font-weight: normal;
+}
+

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Yantramanav-Thin';
+    src: url('Yantramanav-Thin/Yantramanav-Thin.eot');
+    src: url('Yantramanav-Thin/Yantramanav-Thin.eot') format('embedded-opentype'),
+         url('Yantramanav-Thin/Yantramanav-Thin.woff2') format('woff2'),
+         url('Yantramanav-Thin/Yantramanav-Thin.woff') format('woff'),
+         url('Yantramanav-Thin/Yantramanav-Thin.ttf') format('truetype'),
+         url('Yantramanav-Thin/Yantramanav-Thin.svg#Yantramanav-Thin') format('svg');
+    font-weight: 100;
+    font-weight: normal;
+}
+
+

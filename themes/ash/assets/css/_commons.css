@@ -16,14 +16,25 @@ a, a:hover, a:focus, button:hover, button:focus{
 }
 
 body {
-    background: #f8f8f8;
+    background: #ffffff;
     color: #000000;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'OpenSansLight';
 }
 p{
 	line-height: 1.2;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
+}
+a{
+	color: #517435;
+	font-family: 'Yantramanav-Light';
+	display: inline-block;
+	vertical-align: baseline;
+}
+strong,b{
+	font-weight: normal;
+	font-family: 'OpenSansBold';
 }
 /*-- app gap use pattern --*/
 /*data-xxs = 575
@@ -91,7 +102,7 @@ Containers
 
 }
 .container{
-	max-width: 1200px;
+	max-width: 1405px;
 	width: 100%;
 }
 .container-md{
