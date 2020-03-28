@@ -51,3 +51,58 @@
 .breadcrumbs ul li a:hover{
 	color: #6a8852;
 }
+
+
+/*
+page banner
+*/
+.page-banner-controller{
+	height: 342px;
+	position: relative;
+}
+.page-banner-bg{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-repeat: no-repeat!important;
+	background-position: center!important;
+	background-size: cover!important;
+}
+
+/*
+page content
+*/
+.page-con-cntlr{
+	padding-bottom: 100px;
+}
+.page-con-cntlr ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.page-con-cntlr ul li{
+	position: relative;
+	padding: 0 0 5px 20px;
+}
+.page-con-cntlr ul li:before{
+	content: "";
+	width: 8px;
+	height: 8px;
+	background: #000;
+	border-radius: 100%;
+	position: absolute;
+	top: 11px;
+	left: 0;
+	line-height: 0;
+}
+.page-con-cntlr p{
+	margin-bottom: 30px;
+}
+.page-con-cntlr h2,
+.page-con-cntlr h3,
+.page-con-cntlr h4,
+.page-con-cntlr h5{
+	padding-top: 30px;
+}
