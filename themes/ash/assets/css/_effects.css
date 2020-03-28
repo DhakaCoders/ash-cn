@@ -1,7 +1,9 @@
 /**
 All Transitions
 */
-a,input,img,textarea,button,svg{
+a,input,img,textarea,button,svg,
+.fea-img-grd-box-img,.fea-img-grd-box-title,
+.fea-img-grd-box-img{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -12,6 +14,12 @@ a,input,img,textarea,button,svg{
 	-webkit-transform: scale(1.1);
 	-o-transform: scale(1.1);
 }
+.fea-img-grd-box:hover .fea-img-grd-box-img{
+	transform: scale(1.03);
+	-ms-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
+	-o-transform: scale(1.31);
+}
 
 /**
 All Hovers
@@ -21,6 +29,9 @@ a:focus,button:focus,input:focus,textarea:focus{
 }
 a:hover{
 	text-decoration: none;
+}
+a:hover{
+	color: #0a1b25;
 }
 nav.main-nav ul li:hover > a,
 nav.main-nav ul li.current-menu-item a{
