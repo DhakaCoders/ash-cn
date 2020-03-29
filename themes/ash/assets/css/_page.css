@@ -209,6 +209,9 @@ Start blog
 	padding-bottom: 10px;
 	color: #000000;
 }
+.post-des h4{
+	margin-top: -1px;
+}
 .sidebar-widget h4{
 	font-weight: 600;
 }
@@ -332,3 +335,67 @@ Start blog
 .fl-page-content{
 	padding-top: 60px;
 }
+
+
+
+
+@media(max-width: 1199px){
+	.right-sidebar {
+	    padding-right: 20px;
+	}
+
+}
+
+@media(max-width: 991px){
+	.page-banner-controller {
+	    height: 300px;
+	}
+	.main-content{
+		padding-top: 20px;
+	}
+}
+
+@media(max-width: 767px){
+	.page-banner-controller {
+	    height: 280px;
+	}
+	.page-con-cntlr h2, .page-con-cntlr h3, .page-con-cntlr h4, .page-con-cntlr h5 {
+	    padding-top: 15px;
+	}
+	.post-des,
+	.post-img{
+		width: 100%;
+	}
+	.post-img a img {
+	    width: auto;
+	}
+	.post-des h4 {
+	    margin-top: 0;
+	}
+	.post-img{
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+}
+
+@media(max-width: 575px){
+	.page-banner-controller {
+	    height: 270px;
+	}
+	.page-404{
+		padding-top: 0;
+	}
+
+}
+
+@media(max-width: 479px){
+	.page-banner-controller {
+	    height: 245px;
+	}
+
+}
+
+@media(max-width: 359px){
+
+}
+

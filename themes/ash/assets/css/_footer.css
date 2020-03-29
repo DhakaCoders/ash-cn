@@ -94,7 +94,9 @@
 }
 
 @media(max-width: 767px){
-
+	.ftr-top-rgt-col {
+	    float: none;
+	}
 	.ftr-top-lft-col{
 		text-align: center;
 	}
@@ -132,7 +134,6 @@
 		border: 1px solid #000;
 		width: 54px;
 		height: 54px;
-
 		background-color: #517435;
 	}
 	.sticy-menubar-social ul li a,
@@ -183,6 +184,9 @@
 		right: 0;
 		background: #fff;
 		height: 2px;
+		transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-webkit-transition: all 0.5s;
 	}
 	.sticy-menubar-btn-line span:nth-child(2){
 		top: 6px;
@@ -190,6 +194,25 @@
 	.sticy-menubar-btn-line span:nth-child(3){
 		top: 12px;
 	}
+
+	.menu-expend .sticy-menubar-btn-line span:nth-child(1) {
+	    transform: rotate(45deg);
+	    -webkit-transform: rotate(45deg);
+	    -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	    top: 7px;
+	}
+	.menu-expend .sticy-menubar-btn-line span:nth-child(2) {
+	    display: none;
+	}
+	.menu-expend .sticy-menubar-btn-line span:nth-child(3) {
+	   transform: rotate(-45deg);
+	    -webkit-transform: rotate(-45deg);
+	    -moz-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	    top: 7px;
+	}
+
 	.sticy-menubar-btn-inr strong{
 		padding-right: 15px;
 		display: inline-block;
@@ -197,26 +220,38 @@
 		text-transform: uppercase;
 		font-size: 31px;
 	}
+	body{
+		position: relative;
+	}
 	.sticy-menubar-inner{
 		position: relative;
 		z-index: 101;
 	}
-	.main-nav-sm{
-		position: absolute;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		background: rgba(0,0,0,.9);
-		padding: 20px 10px 150px;
-		overflow-y: scroll;
-		z-index: 100;
+	.main-nav-sm {
+		display: flex;
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    bottom: 0;
+	    padding-bottom: 65px;
+	    background: rgba(255,255,255,1);
+	    padding: 20px 10px 20px;
+	    display: none;
+	    border-top: 2px solid #5d7b39;
+	    z-index: 99;
+	    overflow-y: scroll;
 	}
-	.main-nav-sm ul li{
+	.main-nav-sm-inr{
+		
+	}
+	.main-nav-sm-inr ul li{
 		display: block;
 		text-align: center;
 	}
-	.main-nav-sm ul li a{
-		color: #fff;
+	.main-nav-sm-inr ul li a{
+		color: #000;
+		transition: initial!important;
 	}
 	ul.sub-menu li a {
 	    background: transparent;
@@ -225,11 +260,33 @@
 	}
 	ul.sub-menu{
 		padding: 10px 0;
+		display: none;
+		transition: initial!important;
 	}
-	.main-nav-sm > ul > li > a{
+	.main-nav-sm-inr > ul > li > a{
 		font-size: 35px;
+		line-height: 40px;
 		display: inline-block;
 		vertical-align: baseline;
+	}
+	.main-nav-sm-inr > ul > li.menu-item-has-children > a{
+		position: relative;
+	}
+	.main-nav-sm-inr > ul > li.menu-item-has-children > a:after {
+	    content: "\f107";
+	    font-family: 'Font Awesome 5 Free';
+	    font-weight: 600;
+	    text-decoration: inherit;
+	    color: #000;
+	    font-size: 24px;
+	    padding-right: 0;
+	    position: absolute;
+	    top: 18px;
+	    right: -28px;
+	    line-height: 15px;
+	}
+	.main-nav-sm-inr > ul > li.menu-item-has-children > a.sub-menu-expend:after{
+		content: "\f106";
 	}
 
 }
@@ -246,6 +303,17 @@
 	}
 	.sticy-menubar-btn-inr{
 		padding-right: 12px;
+	}
+	.main-nav-sm > ul > li > a {
+    	font-size: 28px;
+    	line-height: 32px;
+	}
+	ul.sub-menu li a{
+		font-size: 22px;
+		line-height: 25px;
+	}
+	.main-nav-sm > ul > li.menu-item-has-children > a:after{
+		top: 15px;
 	}
 
 }
