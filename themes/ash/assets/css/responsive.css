@@ -17,6 +17,21 @@
 	.show-lg{
 		display: block!important;
 	}
+	h1{
+		font-size: 45px;
+	}
+	h2{
+		font-size: 40px;
+	}
+	h3{
+		font-size: 35px;
+	}
+	h4{
+		font-size: 30px;
+	}
+	h5{
+		font-size: 27px;
+	}
 
 }
 
@@ -27,6 +42,22 @@
 	.show-md{
 		display: block!important;
 	}
+	h1{
+		font-size: 42px;
+	}
+	h2{
+		font-size: 38px;
+	}
+	h3{
+		font-size: 33px;
+	}
+	h4{
+		font-size: 29px;
+	}
+	h5{
+		font-size: 26px;
+	}
+
 	
 }
 
@@ -37,6 +68,25 @@
 	.show-sm{
 		display: block!important;
 	}
+	h1{
+		font-size: 40px;
+	}
+	h2{
+		font-size: 35px;
+	}
+	h3{
+		font-size: 31px;
+	}
+	h4{
+		font-size: 27px;
+	}
+	h5{
+		font-size: 24px;
+	}
+	body {
+	    font-size: 21px;
+	    line-height: 28px;
+	}
 }
 
 @media(max-width: 575px){
@@ -45,6 +95,25 @@
 	}
 	.show-xs{
 		display: block!important;
+	}
+	h1{
+		font-size: 35px;
+	}
+	h2{
+		font-size: 31px;
+	}
+	h3{
+		font-size: 27px;
+	}
+	h4{
+		font-size: 24px;
+	}
+	h5{
+		font-size: 21px;
+	}
+	body {
+	    font-size: 19px;
+	    line-height: 26px;
 	}
 
 }
