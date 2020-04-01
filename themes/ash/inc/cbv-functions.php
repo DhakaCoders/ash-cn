@@ -123,56 +123,6 @@ function cbv_get_excerpt($limit = 8, $dot = ''){
   return $excerpt;
 }
 
-function cookieset($atts = []){
-   // normalize attribute keys, lowercase
-    $atts = array_change_key_case((array)$atts, CASE_LOWER);
- 
-    // override default attributes with user attributes
-    $atts = shortcode_atts([
-               'url' => '#',
-           ], $atts);
-  $output = '<div class="catapult-cookie-wrp">
-  <div id="catapult-cookie-bar" class="catapult-cookie-bar clearfix">
-    <div class="catapult-cookie-topbar">
-      <i><img src="'.THEME_URI.'/assets/images/cookie-icon.svg"></i>
-      <strong class="catapult-close-btn">
-       <img src="'.THEME_URI.'/assets/images/cookie-close-icon.svg">
-      </strong>
-    </div>
-    <span class="ctcc-left-side">
-      <h4>Deze website maakt gebruik van cookies.</h4>
-      Phasellus ac tortor mi. Aliquam eget volutpat elit. Duis dapibus dolor sit amet arcu porttitor laoreet. Mauris eget massa nulla. 
-      <a class="ctcc-more-info-link" tabindex="0"  href="'.$atts['url'].'">Meer Info</a>
-    </span>
-    <span class="catapultCookieBtn">
-      
-    </span>
-    <a role="button" tabindex="0" data-cli_action="accept" id="cookie_action_close_header" class="medium cli-plugin-main-button cookie_action_close_header cli_action_button">ok, bedankt</a>
-  </div>
-</div>';
-$output .= '<style>
-#cookie-law-info-bar {
-    border: 0;
-    font-size: initial;
-    margin: 0 auto;
-    padding: 0 !important;
-    position: inherit;
-    width: initial;
-
-    box-shadow: transparent;
-}
-.cli-plugin-button, .cli-plugin-button:visited {
-    text-decoration: none;
-    position: inherit !important;
-    background-color: transparent !important;
-    display: none !important;
-}
-</style>';
-return $output;
-}
-
-add_shortcode('getcookie', 'cookieset' );
-
 /*Allow Span tags in editor*/
 function myextensionTinyMCE($init) {
     // Command separated string of extended elements
@@ -190,3 +140,16 @@ function myextensionTinyMCE($init) {
 }
 
 add_filter('tiny_mce_before_init', 'myextensionTinyMCE' );
+
+// Changing excerpt more
+ function new_excerpt_more($more) {
+   global $post;
+   return '… <a href="'. get_permalink($post->ID) . '">' . '....more >>' . '</a>';
+ }
+ add_filter('excerpt_more', 'new_excerpt_more');
+
+// tn custom excerpt length
+function tn_custom_excerpt_length( $length ) {
+return 50;
+}
+add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
