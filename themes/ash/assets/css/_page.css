@@ -335,6 +335,9 @@ Start blog
 .fl-page-content{
 	padding-top: 60px;
 }
+.single-con-cntlr .post-des{
+	width: 100%;
+}
 
 
 

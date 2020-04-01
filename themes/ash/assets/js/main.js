@@ -105,13 +105,18 @@ $(window).on('resize', function(){
 $('.sticy-menubar-btn').on('click', function(){
   $('body').toggleClass('body-noscroll');
   $(this).toggleClass('menu-expend');
-  $('.main-nav-sm').slideToggle(500);
+  $('.main-nav-sm').addClass('main-nav-sm-active');
   $('li.menu-item-has-children > a').on('click', function(e){
     e.preventDefault();
     $(this).toggleClass('sub-menu-expend');
     $(this).parent().find('.sub-menu').slideToggle();
   });
 });
+
+$('.close-btn').on('click', function(){
+  $('.main-nav-sm').removeClass('main-nav-sm-active');
+});
+
 
 
 
