@@ -31,15 +31,21 @@
 .breadcrumbs ul li{
 	display: inline-block;
 	vertical-align: baseline;
-	padding: 0 7px;
+	padding: 0 9px;
 	position: relative;
 }
 .breadcrumbs ul li:not(:last-child):after {
-    content: ">";
+    content: "";
+    background: url(../images/rgt-angle.png);
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 4px;
     position: absolute;
-    right: -12px;
-    top: 2px;
-    color: #898989;
+    right: -2.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 .breadcrumbs ul li a{
 	color: #898989;
@@ -47,6 +53,10 @@
 	vertical-align: baseline;
     font-family: 'OpenSansLight';
     padding-left: 18px;
+    padding: 0;
+}
+.breadcrumbs ul li a.fl-home-icon{
+	padding-left: 18px;
 }
 .breadcrumbs ul li a:hover,
 .breadcrumbs ul li.active a{
@@ -233,6 +243,7 @@ Start blog
 }
 .sidebar-widget ul li a{
 	font-family: 'Archivo-Regular';
+	color: inherit;
 }
 .sidebar-widget ul li a:hover,
 .post-des h4 a:hover,
@@ -260,7 +271,8 @@ Start blog
 	position: relative;
 	margin-bottom: 40px;
 }
-.right-sidebar  .widget_search input[type="search"]{
+.right-sidebar .widget_search input[type="search"],
+.right-sidebar .sidebar-widget input[type="search"]{
 	border: 1px solid #E6E6E6;
 	padding: 8px 10px 8px 40px;
 	width: 100%;
@@ -269,7 +281,11 @@ Start blog
 	font-family: Arial,Helvetica,sans-serif;
 	margin-top: 0;
 }
-.right-sidebar .widget_search input[type="submit"]{
+.right-sidebar .sidebar-widget input[type="search"]:focus{
+	border-color: #cdcccc;
+}
+.right-sidebar .widget_search input[type="submit"],
+.right-sidebar .sidebar-widget input[type="submit"]{
 	position: absolute;
 	background: url(../images/search-icon.png);
 	background-repeat: no-repeat;
@@ -279,7 +295,17 @@ Start blog
 	left: 14px;
 	top: 12px;
 	margin-top: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
 }
+.search-form{
+	position: relative;
+}
+.search-form label{
+	display: block;
+}
+
 
 .right-sidebar .screen-reader-text{
 	display: none;
@@ -340,6 +366,28 @@ Start blog
 }
 
 
+/*pagger*/
+
+.fl-pagi-pagi-ctlr ul{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.fl-pagi-pagi-ctlr ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 0 5px;
+	font-weight: 700;
+}
+
+.next.page-numbers,
+.prev.page-numbers{
+	position: relative;
+	top: -1px;
+}
+
+
 
 
 @media(max-width: 1199px){
@@ -355,6 +403,9 @@ Start blog
 	}
 	.main-content{
 		padding-top: 20px;
+	}
+	.fl-pagi-pagi-ctlr{
+		padding-bottom: 80px;
 	}
 }
 

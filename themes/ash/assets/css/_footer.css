@@ -1,11 +1,15 @@
 .footer-wrp{
-	padding-top: 100px;
+	padding-top: 200px;
 }
 .ftr-top{
 	padding-bottom: 55px;
 }
 .ftr-logo a{
 	filter: grayscale(100%);
+}
+.ftr-top-rgt-col{
+	display: flex;
+	justify-content: flex-end;
 }
 .ftr-info-cntlr{
 	display: flex;
@@ -17,7 +21,7 @@
 	vertical-align: top;
 }
 .ftr-info-cntlr ul li:first-child{
-	padding-right: 70px;
+	padding-right: 67px;
 }
 .ftr-info-item a{
 	position: relative;
@@ -118,14 +122,19 @@
 	}
 	.sticy-menubar-social{
 		float: left;
+		padding-left: 12px;
+		padding-right: 12px;
 	}
 	.sticy-menubar-social ul{
-		padding-left: 13px;
+		padding-left: 0;
 	}
 	.sticy-menubar-social ul li{
-		padding: 0 13px 0 0;
+		padding: 0 12px 0 0;
 		display: inline-block;
 		vertical-align: baseline;
+	}
+	.sticy-menubar-social ul li:last-child{
+		padding-right: 0;
 	}
 	
 	.sticy-menubar-social ul li a{
@@ -169,7 +178,7 @@
 		height: 100%;
 		padding-right: 20px;
 		background: #0b1b25;
-		margin-right: 13px;
+		margin-right: 12px;
 	}
 	.sticy-menubar-btn-line{
 		width: 19px;
@@ -258,16 +267,18 @@
 	.main-nav-sm-inr{
 		
 	}
-	.main-nav-sm-inr{
+	.main-nav-sm-inr,
+	.main-nav-sm-inr .nav{
 		text-align: right;
-	}
-	.main-nav-sm-inr > ul{
-		padding-top: 35px;
-	}
-	.main-nav-sm-inr ul li{
 		display: block;
 	}
-	.main-nav-sm-inr ul li a{
+	.main-nav-sm-inr .nav > ul{
+		padding-top: 35px;
+	}
+	.main-nav-sm-inr .nav ul li{
+		display: block;
+	}
+	.main-nav-sm-inr .nav ul li a{
 		color: #fff;
 		transition: initial!important;
 	}
@@ -286,16 +297,16 @@
 		transition: initial!important;
 		transition: none!important;
 	}
-	.main-nav-sm-inr > ul > li > a{
+	.main-nav-sm-inr .nav > ul > li > a{
 		font-size: 35px;
 		line-height: 40px;
 		display: inline-block;
 		vertical-align: baseline;
 	}
-	.main-nav-sm-inr > ul > li.menu-item-has-children > a{
+	.main-nav-sm-inr .nav > ul > li.menu-item-has-children > a{
 		position: relative;
 	}
-	.main-nav-sm-inr > ul > li.menu-item-has-children > a:after {
+	.main-nav-sm-inr .nav > ul > li.menu-item-has-children > a:after {
 	    content: "\f107";
 	    font-family: 'Font Awesome 5 Free';
 	    font-weight: 600;
@@ -308,14 +319,22 @@
 	    right: -28px;
 	    line-height: 15px;
 	}
-	.main-nav-sm-inr > ul > li.menu-item-has-children > a.sub-menu-expend:after{
+	.main-nav-sm-inr .nav > ul > li.menu-item-has-children > a.sub-menu-expend:after{
 		content: "\f106";
+	}
+	.ftr-top-rgt-col{
+		display: block;
+	}
+	.ftr-top-rgt-col .show-sm{
+		display: block;
 	}
 
 }
 
 @media(max-width: 575px){
-	
+	.footer-wrp {
+	    padding-top: 150px;
+	}
 
 }
 

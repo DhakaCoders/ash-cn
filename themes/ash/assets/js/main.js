@@ -5,6 +5,10 @@
 if($('.mHc').length){
   $('.mHc').matchHeight();
 };
+if($('.hm-main-con-cntlr #pg-21-1.panel-grid .panel-grid-cell .so-widget-sow-image .widget-title').length){
+  $('.hm-main-con-cntlr #pg-21-1.panel-grid .panel-grid-cell .so-widget-sow-image .widget-title').matchHeight();
+};
+
 
 //$('[data-toggle="tooltip"]').tooltip();
 
@@ -47,59 +51,35 @@ Responsive on 767px
 /**
 Slick slider
 */
-if( $('.responsive-slider').length ){
-    $('.responsive-slider').slick({
-      dots: true,
+/*if( $('.mainBnrSlider').length ){
+    $('.mainBnrSlider').slick({
+      dots: false,
+      arrows: false,
       infinite: false,
       speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
+      slidesToShow: 1,
+      slidesToScroll: 1
     });
-}
+}*/
 
 
-var sticyMenubarSocialWidth = $('.sticy-menubar-social').width();
+var sticyMenubarSocialWidth = $('.sticy-menubar-social').outerWidth();
 var offsetSocialWidth = ( windowWidth - sticyMenubarSocialWidth);
-$('.sticy-menubar-btn').width(offsetSocialWidth);
+var offsetSocialWidth2 = (offsetSocialWidth - 2 );
+$('.sticy-menubar-btn').width(offsetSocialWidth2);
 
 function offsetSocialWidthCal(){
   windowWidth = $(window).width();
-  var sticyMenubarSocialWidth = $('.sticy-menubar-social').width();
+  var sticyMenubarSocialWidth = $('.sticy-menubar-social').outerWidth();
   var offsetSocialWidth = ( windowWidth - sticyMenubarSocialWidth);
-  $('.sticy-menubar-btn').width(offsetSocialWidth);
+  var offsetSocialWidth2 = (offsetSocialWidth - 2 );
+  $('.sticy-menubar-btn').width(offsetSocialWidth2);
 }
 offsetSocialWidthCal();
 $(window).on('resize', function(){
   offsetSocialWidthCal();
 });
+
 
 
 $('.sticy-menubar-btn').on('click', function(){
@@ -114,6 +94,7 @@ $('.sticy-menubar-btn').on('click', function(){
 $('.close-btn').on('click', function(){
   $('.main-nav-sm').removeClass('main-nav-sm-active');
 });
+
 
 
 

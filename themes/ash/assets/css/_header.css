@@ -19,6 +19,7 @@ nav.main-nav{
 	font-size: 22px;
 	line-height: 25px;
     position: relative;
+    margin-right: -20px;
 }
 nav.main-nav:before{
 	content: "";
@@ -38,6 +39,9 @@ nav.main-nav ul{
 }
 nav.main-nav ul li{
 	position: relative;
+}
+nav.main-nav > ul > li:first-child{
+	padding-left: 5px;
 }
 nav.main-nav > ul > li:not(:last-child):after {
     content: "";
@@ -145,7 +149,9 @@ ul.sub-menu li a{
 }
 
 @media(max-width: 1399px){
-
+	nav.main-nav{
+		margin-right: 0;
+	}
 }
 
 @media(max-width: 1299px){
