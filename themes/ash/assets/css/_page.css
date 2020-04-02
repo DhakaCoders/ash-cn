@@ -388,6 +388,52 @@ Start blog
 }
 
 
+/*404*/
+.error-404-wrap h1 {
+    display: inline-block;
+    padding: 12px 20px 12px 60px;
+    position: relative;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 11;
+    border-right: 3px solid #C01718;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 70px;
+}
+.error-404-wrap h1:before, .error-404-wrap h1:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    background: #C01718;
+}
+.error-404-wrap h1:before {
+    bottom: 0;
+    width: 92%;
+    height: 3px;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.error-404-wrap h1:before, .error-404-wrap h1:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    background: #C01718;
+}
+.error-404-wrap h1:after {
+    top: 0;
+    width: 48%;
+    height: 3px;
+    background: #EB1C23;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
 
 
 @media(max-width: 1199px){
