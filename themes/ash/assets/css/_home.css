@@ -27,7 +27,8 @@
 	padding-bottom: 1px;
 }
 
-.hm-main-content-top p a{
+.hm-main-content-top p a,
+.hm-main-con-cntlr .panel-layout p a{
 	text-decoration: underline;
 }
 

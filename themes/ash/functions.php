@@ -17,7 +17,6 @@ if( !function_exists('cbv_theme_setup') ){
 	    
 	  load_theme_textdomain( 'ash', get_template_directory() . '/languages' );
 		add_theme_support( 'title-tag' );
-		add_theme_support( 'woocommerce' );
 		add_theme_support('post-thumbnails');
 		if(function_exists('add_theme_support')) {
 			add_theme_support('category-thumbnails');
@@ -95,36 +94,6 @@ function is_blog () {
 add_post_type_support( 'page', 'excerpt' );
 
 add_filter('use_block_editor_for_post', '__return_false');
-
-function searchfilter($query) {
-    if (is_search() && $query->is_main_query() && !is_admin() ) {
-        $query->set('post_type',array('product'));
-        $query->set( 'posts_per_page', 1 );
-        $query->set( 'orderby', 'modified' );
-    }elseif(is_archive() && $query->is_main_query() && !is_admin()){
-        $query->set('post_type',array('product'));
-        $query->set( 'posts_per_page', 1 );
-        $query->set( 'orderby', 'modified' );
-    }
-return $query;
-}
- 
-add_filter('pre_get_posts','searchfilter');
-
-
-$option_posts_per_page = get_option( 'posts_per_page' );
-add_action( 'init', 'my_modify_posts_per_page', 0);
-function my_modify_posts_per_page() {
-    add_filter( 'option_posts_per_page', 'my_option_posts_per_page' );
-}
-function my_option_posts_per_page( $value ) {
-    global $option_posts_per_page;
-    if ( is_tax( 'faq') ) {
-        return 1;
-    } else {
-        return $option_posts_per_page;
-    }
-}
 
 
 function defer_parsing_of_js ( $url ) {
